@@ -1,0 +1,117 @@
+html, body {
+  background: rgb(25, 25, 25);
+  color: rgb(50, 50, 50);
+  font-family: Arial, sans-serif;
+  font-size: 2.5vmin;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 2vmin;
+  font-size: 2.5vmin;
+  text-align: center;
+}
+a, span {
+  cursor: pointer;
+  border-bottom: 0.25vmin dotted rgb(255, 255, 255);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  transition: .5s;
+}
+a:hover, span:hover {
+  color: rgb(255, 255, 255);
+  border-bottom: 0.25vmin dotted rgb(50, 50, 50);
+}
+.key-wrapper {
+  position: absolute;
+  top: calc(50% - 20vmin);
+  left:  calc(50% - 52.5vmin);
+}
+ul {
+  text-align: center;
+  white-space : nowrap;
+}
+li {
+  display: inline-block;
+  margin: 0.75vmin;
+  width: 5vmin;
+  height: 5vmin;
+  padding: 1vmin;
+  border: 0.25vmin solid rgb(50, 50, 50);
+  border-radius: 1vmin;
+  line-height: 5vmin;
+  text-align: center;
+  text-transform: uppercase;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  transition: .5s;
+}
+li:hover {
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+[data-code="32"] /*SPACEBAR*/ {
+  width: 40vmin;
+}
+.active {
+  margin: 0.25vmin;
+  border: 0.75vmin solid rgb(50, 50, 50);
+  padding: 1vmin;
+  -webkit-transition: 0s;
+  -moz-transition: 0s;
+  -ms-transition: 0s;
+  transition: 0s;
+}
+.drum {
+  border-color: rgb(0, 255, 110);
+  color: rgb(0, 255, 110);
+} .drum.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(0, 255, 110);
+}
+.pad {
+  border-color: rgb(255, 225, 0);
+  color: rgb(255, 225, 0);
+} .pad.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 225, 0);
+}
+.loop {
+  border-color: rgb(255, 85, 0);
+  color: rgb(255, 85, 0);
+} .loop.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 85, 0);
+}
+.bass {
+  border-color: rgb(255, 0, 75);
+  color: rgb(255, 0, 75);
+} .bass.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(255, 0, 75);
+}
+.synth {
+  border-color: rgb(150, 0, 255);
+  color: rgb(150, 0, 255);
+} .synth.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(150, 0, 255);
+}
+.effect {
+  border-color: rgb(0, 150, 255);
+  color: rgb(0, 150, 255);
+} .effect.active {
+  color: rgb(50, 50, 50);
+  background-color: rgb(0, 150, 255);
+}
