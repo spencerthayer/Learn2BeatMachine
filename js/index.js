@@ -19,8 +19,9 @@ $(window).keydown(function(event) {
 /* END */
 
 // Detect Key Events
+// $(window).one("keydown", function(event){
 $(window).keydown(function(event) {
-  code = (event.keyCode) ? event.keyCode : event.which;
+  var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").addClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
@@ -29,7 +30,7 @@ $(window).keydown(function(event) {
 });
 
 $(window).keyup(function(event) {
-  code = (event.keyCode) ? event.keyCode : event.which;
+  var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").removeClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
@@ -56,11 +57,16 @@ $("li").mouseup(function(event) {
 
 // Synthesis
 function startSound() {
-ran = Math.floor((Math.random() * 1000) + 1);
-osc = new Tone.Oscillator(ran, "square")
-    osc.toMaster() //connected to the master output
-    osc.start(); // start it right away
+    ran = Math.floor((Math.random()*2000)+1);
+    osc = new Tone.Oscillator(ran, "triangle")
+    env = new Tone.AmplitudeEnvelope();
+        osc.connect(env);
+        env.toMaster();
+        // osc.toMaster();
+        osc.start();
+        env.triggerAttack();
 }
 function stopSound() {
-    osc.stop(); // start it right away
+    env.triggerRelease();
+    osc.stop();
 }
