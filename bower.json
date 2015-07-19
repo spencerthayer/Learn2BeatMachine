@@ -1,0 +1,12 @@
+{
+  "name": "Passcloud",
+  "version": "0.0.0",
+  "homepage": "https://github.com/OperationSpark/web-audio-drum-machine",
+  "dependencies": {
+    "jQuery": "latest"
+  },
+  "authors": {}
+    "Steve Price <steveprice@mooserooster.com>",
+
+  }
+}

@@ -12,19 +12,20 @@ var mins = 0;
 var seconds = 0;
 var millis = 0;
 
-// Detect Key Events
-
+/* USE THIS TO GET THE VAULE OF KEYS * /
 $(window).keydown(function(event) {
-  // USE THIS TO GET THE VAULE OF KEYS
   console.log("KEYVALUE: " + event.key + ":" + event.keyCode + "@" + event.timeStamp);
 });
+/* END */
 
+// Detect Key Events
 $(window).keydown(function(event) {
   code = (event.keyCode) ? event.keyCode : event.which;
   $("li[data-code='"+code+"']").addClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
+  startSound();
 });
 
 $(window).keyup(function(event) {
@@ -33,6 +34,7 @@ $(window).keyup(function(event) {
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYOFF:" + key + "/" + code + "@" + event.timeStamp);
+  stopSound();
 });
 
 // Detect Mouse Events
@@ -41,6 +43,7 @@ $("li").mousedown(function(event) {
   var key = $(this).data("key");
   var code = $(this).data("code");
   console.log("MOUSEON:" + key + "/" + code + "@" + event.timeStamp);
+  startSound();
 });
 
 $("li").mouseup(function(event) {
@@ -48,4 +51,16 @@ $("li").mouseup(function(event) {
   var key = $(this).data("key");
   var code = $(this).data("code");
   console.log("MOUSEOFF:" + key + "/" + code + "@" + event.timeStamp);
+  stopSound();
 });
+
+// Synthesis
+function startSound() {
+ran = Math.floor((Math.random() * 1000) + 1);
+osc = new Tone.Oscillator(ran, "square")
+    osc.toMaster() //connected to the master output
+    osc.start(); // start it right away
+}
+function stopSound() {
+    osc.stop(); // start it right away
+}
