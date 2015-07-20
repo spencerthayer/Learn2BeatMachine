@@ -19,24 +19,25 @@ $(window).keydown(function(event) {
 /* END */
 
 // Detect Key Events
-// $(window).on("keydown", function(event){
-$(window).keydown(function(event) {
+// $(window).bind("keypress keydown", function(event){
+$(document).keydown(function(event) {
+  event.preventDefault()
   var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").addClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
-  startSound();
-  // $(this).off(event);
+  startSound(code);
 });
 
-$(window).keyup(function(event) {
+$(document).keyup(function(event) {
+  event.preventDefault()
   var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").removeClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYOFF:" + key + "/" + code + "@" + event.timeStamp);
-  stopSound();
+  stopSound(code);
 });
 
 // Detect Mouse Events
@@ -45,7 +46,7 @@ $("li").mousedown(function(event) {
   var key = $(this).data("key");
   var code = $(this).data("code");
   console.log("MOUSEON:" + key + "/" + code + "@" + event.timeStamp);
-  startSound();
+  startSound(code);
 });
 
 $("li").mouseup(function(event) {
@@ -53,12 +54,12 @@ $("li").mouseup(function(event) {
   var key = $(this).data("key");
   var code = $(this).data("code");
   console.log("MOUSEOFF:" + key + "/" + code + "@" + event.timeStamp);
-  stopSound();
+  stopSound(code);
 });
 
 // Synthesis
 function startSound() {
-    ran = Math.floor((Math.random()*2000)+1);
+    ran = Math.floor((Math.random()*500)+10);
     osc = new Tone.Oscillator(ran, "triangle")
     env = new Tone.AmplitudeEnvelope();
         osc.connect(env);
