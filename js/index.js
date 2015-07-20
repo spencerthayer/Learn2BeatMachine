@@ -19,7 +19,7 @@ $(window).keydown(function(event) {
 /* END */
 
 // Detect Key Events
-// $(window).one("keydown", function(event){
+// $(window).on("keydown", function(event){
 $(window).keydown(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").addClass("active")
@@ -27,6 +27,7 @@ $(window).keydown(function(event) {
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
   startSound();
+  // $(this).off(event);
 });
 
 $(window).keyup(function(event) {
