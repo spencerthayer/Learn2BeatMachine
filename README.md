@@ -8,10 +8,17 @@
 - [x] Fix jumpy key interaction.
 - [x] Construct a working keybinding logic.
 - [x] Connect mouse button interaction with keybinding logic.
+- [x] Build basic synth based on ToneJS.
+- [x] Fix key binding problems with ToneJS.
 - [x] Find audio samples.
-- [ ] Add object-based record functionality?
-- [ ] Add IndexedDb storage of beats?
-- [ ] Write lesson in README.md.
+- [ ] Design ToneJS logic for: `drum`, `pad`, `loop`, `bass`, `synth`, and `effect`
+- [ ] Create an instrument JSON for sample and synth rack logic.
+- [ ] Build recording UI.
+- [ ] Build recored timeline UI.
+- [ ] Build object-based record functionality.
+- [ ] Add IndexedDb(?) storage of beats.
+
+- [ ] Continually write the lesson in README.md as we go.
 
 ### How to detect Key Events
 
