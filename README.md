@@ -1,5 +1,4 @@
-
-http://codepen.io/spencerthayer/pen/pJZGVx
+Example: http://codepen.io/spencerthayer/pen/pJZGVx
 
 ## How to detect Key Events
 
