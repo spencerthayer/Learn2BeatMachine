@@ -1,70 +1,63 @@
-// Define Global Variables
-var SoundArray = [];
-var SongArray = [];
-var SongMap = {};
-var SongLen = 1000;
-var kit = "Default";
-var record = false;
-var play = false;
-var startTime = 0;
-var hours = 0;
-var mins = 0;
-var seconds = 0;
-var millis = 0;
-
-/* USE THIS TO GET THE VAULE OF KEYS * /
-$(window).keydown(function(event) {
-  console.log(event.key + ":" + event.keyCode + "@" + event.timeStamp);
-});
-/* END */
 // Detect Key Events
-$(document).keydown(function(event) {
+// $(window).on("keydown", function(event){
+
+var osc = {};
+
+$(window).keydown(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
+  if(osc[code])
+    return;
   $("li[data-code='"+code+"']").addClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
-  // console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
-  // startSound();
+  console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
+  startSound(code);
+  // $(this).off(event);
 });
 
-$(document).keyup(function(event) {
+$(window).keyup(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").removeClass("active")
   var key = $("li[data-code='"+code+"']").data("key");
   var code = $("li[data-code='"+code+"']").data("code");
-  // console.log("KEYOFF:" + key + "/" + code + "@" + event.timeStamp);
-  // stopSound();
+  console.log("KEYOFF:" + key + "/" + code + "@" + event.timeStamp);
+  if(!osc[code])
+    return;
+  stopSound(code);
 });
+
+
 
 // Detect Mouse Events
 $("li").mousedown(function(event) {
   $(this).addClass("active");
   var key = $(this).data("key");
   var code = $(this).data("code");
-  // console.log("MOUSEON:" + key + "/" + code + "@" + event.timeStamp);
-  // startSound();
+  console.log("MOUSEON:" + key + "/" + code + "@" + event.timeStamp);
+  startSound();
 });
 
 $("li").mouseup(function(event) {
   $(this).removeClass("active");
   var key = $(this).data("key");
   var code = $(this).data("code");
-  // console.log("MOUSEOFF:" + key + "/" + code + "@" + event.timeStamp);
-  // stopSound();
+  console.log("MOUSEOFF:" + key + "/" + code + "@" + event.timeStamp);
+  stopSound();
 });
 
 // Synthesis
-// function startSound() {
-//     ran = Math.floor((Math.random()*2000)+1);
-//     osc = new Tone.Oscillator(ran, "triangle")
-//     env = new Tone.AmplitudeEnvelope();
-//         osc.connect(env);
-//         env.toMaster();
-//         osc.toMaster();
-//         osc.start();
-//         env.triggerAttack();
-// }
-// function stopSound() {
-//     env.triggerRelease();
-//     osc.stop();
-// }
+function startSound(key) {
+    ran = Math.floor((Math.random()*500)+100);
+    var o = osc[key] = new Tone.Oscillator(ran, "triangle")
+    env = new Tone.AmplitudeEnvelope();
+        o.connect(env);
+        env.toMaster();
+        // osc.toMaster();
+        o.start();
+        env.triggerAttack();
+}
+function stopSound(key) {
+    env.triggerRelease();
+    osc[key].stop();
+    osc[key] = 0;
+}

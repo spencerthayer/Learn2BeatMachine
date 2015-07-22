@@ -82,41 +82,41 @@ li:hover {
   border-color: rgb(0, 255, 100);
   color: rgb(0, 255, 100);
 } .drum.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(0, 255, 100);
 }
 .pad {
   border-color: rgb(255, 225, 0);
   color: rgb(255, 225, 0);
 } .pad.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(255, 225, 0);
 }
 .loop {
   border-color: rgb(255, 100, 0);
   color: rgb(255, 100, 0);
 } .loop.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(255, 100, 0);
 }
 .bass {
   border-color: rgb(255, 0, 75);
   color: rgb(255, 0, 75);
 } .bass.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(255, 0, 75);
 }
 .synth {
   border-color: rgb(150, 0, 255);
   color: rgb(150, 0, 255);
 } .synth.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(150, 0, 255);
 }
 .effect {
   border-color: rgb(0, 150, 255);
   color: rgb(0, 150, 255);
 } .effect.active {
-  color: rgb(75, 75, 75);
+  color: rgb(25, 25, 25);
   background-color: rgb(0, 150, 255);
 }
