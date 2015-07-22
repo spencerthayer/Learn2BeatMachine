@@ -1,5 +1,8 @@
 Example: http://codepen.io/spencerthayer/pen/pJZGVx
 
+<p data-height="401" data-theme-id="0" data-slug-hash="pJZGVx" data-default-tab="result" data-user="spencerthayer" class='codepen'>See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a> by Spencer Thayer (<a href='http://codepen.io/spencerthayer'>@spencerthayer</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ## How to detect Key Events
 
 Now that we have the HTML setup it's time to start adding the keyCode data.
