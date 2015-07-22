@@ -1,13 +1,12 @@
 # Learn 2 Beat Machine
 #### An Operation Spark Lesson
 
-See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a>
-
-<iframe height='401' scrolling='no' src='//codepen.io/spencerthayer/embed/pJZGVx/?height=401&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
+<strong><a href="http://codepen.io/spencerthayer/pen/pJZGVx/" target="_blank">Learn 2 Beat Machine on CodePen</a></strong>
+<iframe height="401" scrolling="no" src="//codepen.io/spencerthayer/embed/pJZGVx/?height=401&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 
 ### How to detect Key Events
 
-Now that we have the HTML setup it's time to start adding the keyCode data.
+Now that we have the HTML setup it"s time to start adding the keyCode data.
 ```javascript
 $(window).keydown(function(event) {
   console.log("KEYVALUE: " + event.key + ":" + event.keyCode);
@@ -27,9 +26,9 @@ $(window).keydown(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
   if(osc[code])
     return;
-  $("li[data-code='"+code+"']").addClass("active")
-  var key = $("li[data-code='"+code+"']").data("key");
-  var code = $("li[data-code='"+code+"']").data("code");
+  $("li[data-code=""+code+""]").addClass("active")
+  var key = $("li[data-code=""+code+""]").data("key");
+  var code = $("li[data-code=""+code+""]").data("code");
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
   startSound(code);
 });
@@ -37,9 +36,9 @@ $(window).keydown(function(event) {
 ```javascript
 $(window).keyup(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
-  $("li[data-code='"+code+"']").removeClass("active")
-  var key = $("li[data-code='"+code+"']").data("key");
-  var code = $("li[data-code='"+code+"']").data("code");
+  $("li[data-code=""+code+""]").removeClass("active")
+  var key = $("li[data-code=""+code+""]").data("key");
+  var code = $("li[data-code=""+code+""]").data("code");
   console.log("KEYOFF:" + key + "/" + code + "@" + event.timeStamp);
   if(!osc[code])
     return;
