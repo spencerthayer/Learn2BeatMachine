@@ -1,6 +1,6 @@
 # Learn 2 Beat Machine
 #### An Operation Spark Lesson
-[Live Example on CodePen](http://codepen.io/spencerthayer/pen/pJZGVx/)
+[Live Example on CodePen](http://codepen.io/spencerthayer/debut/pJZGVx/?)
 
 ## To Dos
 - [x] Build UI.
