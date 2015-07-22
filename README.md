@@ -3,13 +3,13 @@
 [Live Example on CodePen](http://codepen.io/spencerthayer/pen/pJZGVx/)
 
 ## To Dos
-[x] Build UI.
-[x] Construct a working keybinding logic.
-[x] Connect mouse button interaction with keybinding logic.
-[x] Find audio samples.
-[] Add object-based record functionality?
-[] Add IndexedDb storage of beats?
-[] Write lesson in README.md.
+- [x] Build UI.
+- [x] Construct a working keybinding logic.
+- [x] Connect mouse button interaction with keybinding logic.
+- [x] Find audio samples.
+- [ ] Add object-based record functionality?
+- [ ] Add IndexedDb storage of beats?
+- [ ] Write lesson in README.md.
 
 ### How to detect Key Events
 
