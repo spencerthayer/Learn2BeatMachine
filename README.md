@@ -1,12 +1,10 @@
 # Learn 2 Beat Machine
 #### An Operation Spark Lesson
-
-<strong><a href="http://codepen.io/spencerthayer/pen/pJZGVx/" target="_blank">Learn 2 Beat Machine on CodePen</a></strong>
-<iframe height="401" scrolling="no" src="//codepen.io/spencerthayer/embed/pJZGVx/?height=401&theme-id=0&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
+[Live Example on CodePen](http://codepen.io/spencerthayer/pen/pJZGVx/)
 
 ### How to detect Key Events
 
-Now that we have the HTML setup it"s time to start adding the keyCode data.
+Now that we have the HTML setup it's time to start adding the keyCode data.
 ```javascript
 $(window).keydown(function(event) {
   console.log("KEYVALUE: " + event.key + ":" + event.keyCode);
