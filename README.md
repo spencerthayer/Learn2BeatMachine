@@ -16,8 +16,8 @@
 - [ ] Build recording UI.
 - [ ] Build recored timeline UI.
 - [ ] Build object-based record functionality.
-- [ ] Create recording storage database. 
-- - Perhaps IndexedDb storage of beats.
+- [ ] Create recording storage database.
+ - Perhaps IndexedDb storage of beats.
 - [ ] Continually write the lesson in README.md as we go.
 
 ### How to detect Key Events
