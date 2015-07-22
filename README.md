@@ -1,9 +1,11 @@
-See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a>
+# Learn 2 Beat Machine
+## A Operation Spark Lesson
 
+See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a>
 
 <iframe height='401' scrolling='no' src='//codepen.io/spencerthayer/embed/pJZGVx/?height=401&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
 
-## How to detect Key Events
+### How to detect Key Events
 
 Now that we have the HTML setup it's time to start adding the keyCode data.
 ```javascript
@@ -12,7 +14,7 @@ $(window).keydown(function(event) {
 });
 ```
 
-## Setup the first Key Listener
+### Setup the first Key Listener
 ```javascript
 var osc = {};
 
@@ -38,7 +40,7 @@ $(window).keyup(function(event) {
   stopSound(code);
 });
 ```
-## Detecting Mouse Interaction with Screen Keys
+### Detecting Mouse Interaction with Screen Keys
 ```javascript
 // Detect Mouse Events
 $("li").mousedown(function(event) {
@@ -57,7 +59,7 @@ $("li").mouseup(function(event) {
   stopSound();
 });
 ```
-## Creating our First Random Sounds
+### Creating our First Random Sounds
 ```javascript
 // Synthesis
 function startSound(key) {
