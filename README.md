@@ -18,7 +18,6 @@ $(window).keydown(function(event) {
   var code = $("li[data-code='"+code+"']").data("code");
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
   startSound(code);
-  // $(this).off(event);
 });
 
 $(window).keyup(function(event) {
@@ -58,7 +57,6 @@ function startSound(key) {
     env = new Tone.AmplitudeEnvelope();
         o.connect(env);
         env.toMaster();
-        // osc.toMaster();
         o.start();
         env.triggerAttack();
 }
