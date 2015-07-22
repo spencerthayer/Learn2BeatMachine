@@ -1,5 +1,5 @@
 # Learn 2 Beat Machine
-## A Operation Spark Lesson
+#### An Operation Spark Lesson
 
 See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a>
 
