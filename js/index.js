@@ -1,6 +1,3 @@
-// Detect Key Events
-// $(window).on("keydown", function(event){
-
 var osc = {};
 
 $(window).keydown(function(event) {

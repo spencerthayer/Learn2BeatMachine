@@ -2,10 +2,14 @@ Example: http://codepen.io/spencerthayer/pen/pJZGVx
 
 ## How to detect Key Events
 
+Now that we have the HTML setup it's time to start adding the keyCode data.
 ```javascript
-$(window).on("keydown", function(event){
+$(window).keydown(function(event) {
+  console.log("KEYVALUE: " + event.key + ":" + event.keyCode);
+});
 ```
 
+## Setup the first Key Listener
 ```javascript
 var osc = {};
 
@@ -30,9 +34,9 @@ $(window).keyup(function(event) {
     return;
   stopSound(code);
 });
-
-
-
+```
+## Detecting Mouse Interaction with Screen Keys
+```javascript
 // Detect Mouse Events
 $("li").mousedown(function(event) {
   $(this).addClass("active");
@@ -49,7 +53,9 @@ $("li").mouseup(function(event) {
   console.log("MOUSEOFF:" + key + "/" + code + "@" + event.timeStamp);
   stopSound();
 });
-
+```
+## Creating our First Random Sounds
+```javascript
 // Synthesis
 function startSound(key) {
     ran = Math.floor((Math.random()*500)+10);
