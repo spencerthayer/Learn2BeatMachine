@@ -1,7 +1,7 @@
-Example: http://codepen.io/spencerthayer/pen/pJZGVx
+See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a>
 
-<p data-height="401" data-theme-id="0" data-slug-hash="pJZGVx" data-default-tab="result" data-user="spencerthayer" class='codepen'>See the Pen <a href='http://codepen.io/spencerthayer/pen/pJZGVx/'>Learn 2 Beat Machine </a> by Spencer Thayer (<a href='http://codepen.io/spencerthayer'>@spencerthayer</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<iframe height='401' scrolling='no' src='//codepen.io/spencerthayer/embed/pJZGVx/?height=401&theme-id=0&default-tab=result' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'></iframe>
 
 ## How to detect Key Events
 
