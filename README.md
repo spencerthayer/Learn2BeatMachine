@@ -4,6 +4,8 @@
 
 ## To Dos
 - [x] Build UI.
+- [x] Add easy user customization in CSS.
+- [x] Fix jumpy key interaction.
 - [x] Construct a working keybinding logic.
 - [x] Connect mouse button interaction with keybinding logic.
 - [x] Find audio samples.
