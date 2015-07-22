@@ -15,9 +15,14 @@ $(window).keydown(function(event) {
 ```
 
 ### Setup the first Key Listener
+We need to create a variable named `osc` and give it a new empty object using `{}` as the value.
+The curly brackets should not be confused with an Array but a simply a general Object, so `var myObject = {};` is equivalent to `var myObject = new Object();``
+
 ```javascript
 var osc = {};
+```
 
+```javascript
 $(window).keydown(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
   if(osc[code])
