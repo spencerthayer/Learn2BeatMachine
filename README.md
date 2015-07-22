@@ -1,7 +1,11 @@
-// Detect Key Events
-// $(window).on("keydown", function(event){
 
 http://codepen.io/spencerthayer/pen/pJZGVx
+
+## How to detect Key Events
+
+```javascript
+$(window).on("keydown", function(event){
+```
 
 ```javascript
 var osc = {};
