@@ -16,12 +16,12 @@ $(window).keydown(function(event) {
 
 ### Setup the first Key Listener
 We need to create a variable named `osc` and give it a new empty object using `{}` as the value.
-The curly brackets should not be confused with an Array but a simply a general Object, so `var myObject = {};` is equivalent to `var myObject = new Object();``
-
+The curly brackets should not be confused with an Array but a simply a general Object, so `var myObject = {};` is equivalent to `var myObject = new Object();`.
 ```javascript
 var osc = {};
 ```
 
+Next we need to look for user interaction with the keyboard.
 ```javascript
 $(window).keydown(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
@@ -33,7 +33,8 @@ $(window).keydown(function(event) {
   console.log("KEYON:" + key + "/" + code + "@" + event.timeStamp);
   startSound(code);
 });
-
+```
+```javascript
 $(window).keyup(function(event) {
   var code = (event.keyCode ? event.keyCode : event.which);
   $("li[data-code='"+code+"']").removeClass("active")
