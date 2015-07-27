@@ -1,5 +1,5 @@
 # Learn 2 Beat Machine
-#### An Operation Spark Lesson
+#### A lesson in Javascript WebAudio and Input Devices 
 [Live Example on CodePen](http://codepen.io/spencerthayer/debut/pJZGVx/?)
 
 ## To Dos
