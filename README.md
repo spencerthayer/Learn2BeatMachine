@@ -1,6 +1,6 @@
 # Learn 2 Beat Machine
-#### A lesson in Javascript WebAudio and Input Devices 
-[Live Example on CodePen](http://codepen.io/spencerthayer/debut/pJZGVx/?)
+#### A lesson in Javascript WebAudio and Input Devices
+[Live Example on CodePen](http://codepen.io/spencerthayer/debug/pJZGVx/?)
 
 ## To Dos
 - [x] Build UI.
